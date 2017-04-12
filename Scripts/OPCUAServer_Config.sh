@@ -1,6 +1,6 @@
 #!/bin/bash
 TOSCAHOME="/home/pi/tosca4iot"
-apt-get -y install subversion git
+sudo apt-get -y install subversion git
 cd ~
 mkdir $TOSCAHOME
 cd $TOSCAHOME

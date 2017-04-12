@@ -1,4 +1,4 @@
 #!/bin/bash
 
-apt-get -y update & apt-get upgrade
-pip install freeopcua
+sudo apt-get -y update & apt-get upgrade
+sudo pip install freeopcua

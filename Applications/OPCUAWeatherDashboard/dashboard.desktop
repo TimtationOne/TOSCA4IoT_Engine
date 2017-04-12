@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Autostart-Script
+Comment=Kommentar
+Type=Application
+Exec=/home/pi/tosca4iot/OPCUAWeatherDashboard/OPCUAWeatherDashboard_Start.sh
+Terminal=false

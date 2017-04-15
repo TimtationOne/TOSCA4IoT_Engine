@@ -1,2 +1,2 @@
 #!/bin/bash
-reboot -now
+reboot now

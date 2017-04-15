@@ -9,3 +9,7 @@ cd $TOSCAHOME
 
 #UseCase Installation
 svn export https://github.com/TimtationOne/TOSCA4IoT_Engine.git/trunk/Applications/OPCUAWeatherDashboard
+
+chmod 777 $TOSCAHOME/OPCUAWeatherDashboard/start.sh
+
+cd ~

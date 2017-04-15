@@ -5,11 +5,11 @@ apt-get -y remove nodejs
 
 
 #Git Installation
-HOME="/home/pi"
+TOSCAHOME="/home/pi/tosca4iot"
 apt-get -y install subversion git
 cd ~
-mkdir $HOME/UseCase
-cd $HOME/UseCase/
+mkdir $TOSCAHOME
+cd $TOSCAHOME
 
 #UseCase Installation
 svn export https://github.com/TimtationOne/TOSCA4IoT_Engine.git/trunk/Applications/OPCUAWeatherDashboard

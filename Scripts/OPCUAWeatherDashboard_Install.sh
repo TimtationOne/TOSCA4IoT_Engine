@@ -1,9 +1,5 @@
 #!/bin/bash
 
-apt-get -y update & apt-get upgrade
-apt-get -y remove nodejs
-
-
 #Git Installation
 TOSCAHOME="/home/pi/tosca4iot"
 apt-get -y install subversion git

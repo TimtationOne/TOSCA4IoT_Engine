@@ -1,6 +1,33 @@
 var SensorTag = require('sensortag');
+var fs = require('fs');
+var path = require('path')
+
 var pushDelay = 3000;
-var opcuaAddress = process.argv[2]; //"opc.tcp://localhost:4840";
+var opcuaAddress = "";
+
+var jsonPath = path.join(__dirname,'config.properties')
+console.log(jsonPath)
+var content;
+// First I want to read the file
+fs.readFile(jsonPath, 'UTF-8', function read(err, data) {
+    if (err) {
+        throw err;
+    }
+    content = data;
+
+    // Invoke the next step here however you like
+    //console.log(content);   // Put all of the code here (not the best solution)
+    processFile();          // Or put the next step in a function and invoke it
+});
+
+function processFile() {
+    console.log('OPCUA-Address: '+content);
+	opcuaAddress=content;
+}
+
+
+
+
 
 var data =
     {

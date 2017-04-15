@@ -2,5 +2,5 @@
 Name=Autostart-Script
 Comment=Kommentar
 Type=Application
-Exec=/home/pi/tosca4iot/OPCUAWeatherDashboard/OPCUAWeatherDashboard_Start.sh
+Exec=/home/pi/tosca4iot/OPCUAWeatherDashboard/start.sh
 Terminal=false

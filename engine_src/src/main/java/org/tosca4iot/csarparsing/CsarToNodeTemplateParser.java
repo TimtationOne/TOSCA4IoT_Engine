@@ -1,4 +1,4 @@
-package CSARParsing;
+package org.tosca4iot.csarparsing;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,37 +12,35 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.tosca4iot.toscatypes.NodeType;
+import org.tosca4iot.toscatypes.NodeTypeHTTPInterface;
+import org.tosca4iot.toscatypes.NodeTypeSSHInterface;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
-import toscaTypes.NodeType;
-import toscaTypes.NodeTypeHTTPInterface;
-import toscaTypes.NodeTypeSSHInterface;
-
 import org.w3c.dom.Element;
 
-public class CSARParser {
-	String rootPath="C:/Users/ebnert/OneDrive - Hewlett Packard Enterprise/Documents/shortPath/20170407TOSCA4IoT/TOSCA4IoT_Engine_new/CSARs/TISensorTag2OPCUA/TISensorTag2OPCUA";
-	List<NodeType> nodeTypeList = new ArrayList<NodeType>();
-	List<String> orderList;
-	//List<String> nodeTypeFileNameList = new ArrayList<String>();
-	public List<NodeType> listToDataModel(List<String> orderedList){
-		orderList=orderedList;
+public class CsarToNodeTemplateParser {
+	String rootPath;
+	List<NodeType> nodeTemplateList = new ArrayList<NodeType>();
+	
+	public CsarToNodeTemplateParser(String csarRootPath){
+		rootPath=csarRootPath;
+
+	}
+	
+	public void parse(List<NodeType> nodeTemplateList){
+		this.nodeTemplateList=nodeTemplateList;
 		try {
 			String entryDef=getEntryDef();
-			orderListToNodeTypeList();
-			printList(nodeTypeList);
 			getFullNodeTypeName(entryDef);
-			//printList(nodeTypeFileNameList);
-			processNodeTypes();
+			fillNodeTypes(nodeTemplateList);
 			
 		} catch (ParserConfigurationException | SAXException |IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return nodeTypeList;
 	}
 	
 	public String getEntryDef() throws IOException{
@@ -56,23 +54,6 @@ public class CSARParser {
 		byte[] encoded = Files.readAllBytes(Paths.get(path));
 		return new String(encoded, StandardCharsets.UTF_8);
 	}
-	public void parseEntryDefinitionFile(String entryDef) throws ParserConfigurationException, SAXException, IOException {
-		File fXmlFile = new File(rootPath+"/Definitions/"+entryDef);
-		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		Document doc = dBuilder.parse(fXmlFile);
-		doc.getDocumentElement().normalize();
-		NodeList nList = doc.getElementsByTagName("tosca:RelationshipTemplate");
-		for (int temp = 0; temp < nList.getLength(); temp++) {
-			Node nNode = nList.item(temp);
-			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-				Element eElement = (Element) nNode ;
-				String sourceElement = ((Element)eElement.getElementsByTagName("tosca:SourceElement").item(0)).getAttribute("ref");
-				String targetElement = ((Element)eElement.getElementsByTagName("tosca:TargetElement").item(0)).getAttribute("ref");
-				sortNodeTypes(targetElement,sourceElement);
-			}
-		}
-	  }
 	
 	public void getFullNodeTypeName(String entryDef) throws ParserConfigurationException, SAXException, IOException {
 
@@ -88,70 +69,34 @@ public class CSARParser {
 			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 				Element eImport = (Element) nNode ;
 				String fullFileName=eImport.getAttribute("location");
-				for(int i=0; i<nodeTypeList.size();i++){
-					if(fullFileName.contains(nodeTypeList.get(i).getName()) ){
-						nodeTypeList.get(i).setFileName(fullFileName);
+				for(int i=0; i<nodeTemplateList.size();i++){
+					if(fullFileName.contains(nodeTemplateList.get(i).getName()) ){
+						nodeTemplateList.get(i).setFileName(fullFileName);
 					}
 				}
 			}
 		}
 	  }
 	
-	private void sortNodeTypes(String targetNode, String sourceNode){
-		//TODO: Connects To Sonderregel
-		int targetPos=orderList.indexOf(targetNode);
-		int sourcePos=orderList.indexOf(sourceNode);
-		if ((targetPos==-1)&&(sourcePos==-1)){
-			orderList.add(targetNode);
-			orderList.add(sourceNode);
-		} else if ((targetPos!=-1)&&(sourcePos!=-1)){
-			if (targetPos>sourcePos){
-				orderList.remove(sourcePos);
-				targetPos=orderList.indexOf(targetNode);
-				if (targetPos+1==orderList.size()) {
-					orderList.add(sourceNode);
-				} else{
-					orderList.add(targetPos+1, sourceNode);
-				}
-			}
-		} else if ((targetPos!=-1)&&(sourcePos==-1)){
-			if (targetPos+1==nodeTypeList.size()) {
-				orderList.add(sourceNode);
-			} else{
-				orderList.add(targetPos+1, sourceNode);
-			}
-		} else if ((targetPos==-1)&&(sourcePos!=-1)){
-			orderList.add(sourcePos,targetNode);
-		}
-	}
-	private void printList(List theList){
-		for(int i=0;i<theList.size();i++ ){
-			System.out.println(i+":"+theList.get(i));
-		}
-	}
 	
-	private void orderListToNodeTypeList(){
-		for(int i=0;i<orderList.size();i++ ){
-			nodeTypeList.add(new NodeType(orderList.get(i)));
-		}
-	}
-	
-	private void processNodeTypes() throws ParserConfigurationException, SAXException, IOException{
+	private void fillNodeTypes(List<NodeType> nodeTypeList) throws ParserConfigurationException, SAXException, IOException{
 		for(int i=0;i<nodeTypeList.size();i++ ){
 			NodeType theNodeType = nodeTypeList.get(i);
 			String nodeTypeName = theNodeType.getName() ;
 			System.out.println("Process " +nodeTypeName+ " ..." );
 			String nodeTypeFileName = theNodeType.getFileName() ;
-			String nodeTypeInterface = getNodeTypeInterface(nodeTypeFileName);
-			System.out.println("Interface: "+nodeTypeInterface);
-			if(nodeTypeInterface.equals("http://www.example.com/interfaces/lifecycle")){
-				theNodeType.setLifecycleInterface(new NodeTypeSSHInterface());
-			} else if (nodeTypeInterface.equals("http_lifecycle")){
-				theNodeType.setLifecycleInterface(new NodeTypeHTTPInterface());
-			}
-			getNodeTypeImplementationFileName(theNodeType);
-			if (nodeTypeList.get(i).getImplementationFileName() !=null){
-				parseNodeTypeInterfaceRef(theNodeType);
+			if (nodeTypeFileName!=null){
+				String nodeTypeInterface = getNodeTypeInterface(nodeTypeFileName);
+				System.out.println("Interface: "+nodeTypeInterface);
+				if(nodeTypeInterface.equals("ssh_lifecycle")){
+					theNodeType.setLifecycleInterface(new NodeTypeSSHInterface(theNodeType.getServiceTemplate()));
+				} else if (nodeTypeInterface.equals("http_lifecycle")){
+					theNodeType.setLifecycleInterface(new NodeTypeHTTPInterface(theNodeType.getServiceTemplate() ));
+				}
+				getNodeTypeImplementationFileName(theNodeType);
+				if (nodeTypeList.get(i).getImplementationFileName() !=null){
+					parseNodeTypeInterfaceRef(theNodeType);
+				}
 			}
 		}
 	}
@@ -235,4 +180,8 @@ public class CSARParser {
 		String path=rootPath+"/"+eArtifactRef.getAttribute("reference").replace("25", "");
 		return path;
 	}
+	
+	
+	
+	
 }

@@ -1,3 +1,4 @@
 #!/bin/bash
 
-sudo pip install freeopcua
+apt-get install -y python-pip
+pip install freeopcua

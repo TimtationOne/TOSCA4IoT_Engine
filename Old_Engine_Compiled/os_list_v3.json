@@ -1,0 +1,320 @@
+{
+    "os_list": [
+        {
+            "description": "LibreELEC is a fast and user-friendly Kodi Entertainment Center distribution.",
+            "icon": "http://releases.libreelec.tv/noobs/LibreELEC_RPi/LibreELEC_RPi.png",
+            "marketing_info": "http://releases.libreelec.tv/noobs/LibreELEC_RPi/marketing.tar",
+            "nominal_size": 1024,
+            "os_info": "http://releases.libreelec.tv/noobs/LibreELEC_RPi/os.json",
+            "os_name": "LibreELEC_RPi",
+            "partition_setup": "http://releases.libreelec.tv/noobs/LibreELEC_RPi/partition_setup.sh",
+            "partitions_info": "http://releases.libreelec.tv/noobs/LibreELEC_RPi/partitions.json",
+            "release_date": "2016-05-17",
+            "supported_hex_revisions": "2,3,4,5,6,7,8,9,d,e,f,10,11,12,14,19,0092",
+            "supported_models": [
+                "Pi Model",
+                "Pi Compute Module",
+                "Pi Zero"
+            ],
+            "tarballs": [
+                "http://releases.libreelec.tv/noobs/LibreELEC_RPi/LibreELEC_RPi_System.tar.xz",
+                "http://releases.libreelec.tv/noobs/LibreELEC_RPi/LibreELEC_RPi_Storage.tar.xz"
+            ]
+        },
+        {
+            "description": "LibreELEC is a fast and user-friendly Kodi Entertainment Center distribution.",
+            "icon": "http://releases.libreelec.tv/noobs/LibreELEC_RPi2/LibreELEC_RPi2.png",
+            "marketing_info": "http://releases.libreelec.tv/noobs/LibreELEC_RPi2/marketing.tar",
+            "nominal_size": 1024,
+            "os_info": "http://releases.libreelec.tv/noobs/LibreELEC_RPi2/os.json",
+            "os_name": "LibreELEC_RPi2",
+            "partition_setup": "http://releases.libreelec.tv/noobs/LibreELEC_RPi2/partition_setup.sh",
+            "partitions_info": "http://releases.libreelec.tv/noobs/LibreELEC_RPi2/partitions.json",
+            "release_date": "2016-05-17",
+            "supported_hex_revisions": "1040,1041,2082",
+            "supported_models": [
+                "Pi 2",
+                "Pi 3"
+            ],
+            "tarballs": [
+                "http://releases.libreelec.tv/noobs/LibreELEC_RPi2/LibreELEC_RPi2_System.tar.xz",
+                "http://releases.libreelec.tv/noobs/LibreELEC_RPi2/LibreELEC_RPi2_Storage.tar.xz"
+            ]
+        },
+        {
+            "description": "A fast and feature filled open source media center",
+            "feature_level": 35120124,
+            "icon": "http://download.osmc.tv/installers/noobs/NOOBS-Logo-2.png",
+            "marketing_info": "http://download.osmc.tv/installers/noobs/marketing.tar",
+            "nominal_size": 1580,
+            "os_info": "http://download.osmc.tv/installers/noobs/os-pi1.json",
+            "os_name": "OSMC_Pi1",
+            "partition_setup": "http://download.osmc.tv/installers/noobs/partition_setup.sh",
+            "partitions_info": "http://download.osmc.tv/installers/noobs/partitions-pi1.json",
+            "release_date": "2016-05-02",
+            "supports_usb_boot": "false",
+            "supported_hex_revisions": "2,3,4,5,6,7,8,9,d,e,f,10,11,12,14,19,0092,0093",
+            "supported_models": [
+                "Pi Model",
+                "Pi Compute Module",
+                "Pi Zero"
+            ],
+            "tarballs": [
+                "http://download.osmc.tv/installers/noobs/boot-rbp1.tar.xz",
+                "http://download.osmc.tv/installers/noobs/root-rbp1.tar.xz"
+            ]
+        },
+        {
+            "description": "A port of Debian jessie for the Raspberry Pi (minimal version)",
+            "feature_level": 35120124,
+            "icon": "http://downloads.raspberrypi.org/raspbian_lite/Raspbian_Lite.png",
+            "marketing_info": "http://downloads.raspberrypi.org/raspbian_lite/marketing.tar",
+            "nominal_size": 1189,
+            "os_info": "http://downloads.raspberrypi.org/raspbian_lite/os.json",
+            "os_name": "Raspbian Lite",
+            "partition_setup": "http://downloads.raspberrypi.org/raspbian_lite/partition_setup.sh",
+            "partitions_info": "http://downloads.raspberrypi.org/raspbian_lite/partitions.json",
+            "release_date": "2017-03-02",
+            "supported_hex_revisions": "2,3,4,5,6,7,8,9,d,e,f,10,11,12,14,19,1040,1041,0092,0093,2082",
+            "supported_models": [
+                "Pi Model",
+                "Pi 2",
+                "Pi Zero",
+                "Pi 3"
+            ],
+            "tarballs": [
+                "http://downloads.raspberrypi.org/raspbian_lite/boot.tar.xz",
+                "http://downloads.raspberrypi.org/raspbian_lite/root.tar.xz"
+            ]
+        },
+        {
+            "description": "The DIY retro emulation console",
+            "icon": "http://mirror.lakka.tv/noobs/Lakka_RPi/Lakka_RPi.png",
+            "marketing_info": "http://mirror.lakka.tv/noobs/Lakka_RPi/marketing.tar",
+            "nominal_size": 1024,
+            "os_info": "http://mirror.lakka.tv/noobs/Lakka_RPi/os.json",
+            "os_name": "Lakka_RPi",
+            "partition_setup": "http://mirror.lakka.tv/noobs/Lakka_RPi/partition_setup.sh",
+            "partitions_info": "http://mirror.lakka.tv/noobs/Lakka_RPi/partitions.json",
+            "release_date": "2016-10-18",
+            "supports_usb_boot": "false",
+            "supported_hex_revisions": "2,3,4,5,6,7,8,9,d,e,f,10,11,12,14,19",
+            "supported_models": [
+                "Pi Model",
+                "Pi Compute Module",
+                "Pi Zero"
+            ],
+            "tarballs": [
+                "http://mirror.lakka.tv/noobs/Lakka_RPi/Lakka_RPi_System.tar.xz",
+                "http://mirror.lakka.tv/noobs/Lakka_RPi/Lakka_RPi_Storage.tar.xz"
+            ]
+        },
+        {
+            "description": "The DIY retro emulation console",
+            "icon": "http://mirror.lakka.tv/noobs/Lakka_RPi2/Lakka_RPi2.png",
+            "marketing_info": "http://mirror.lakka.tv/noobs/Lakka_RPi2/marketing.tar",
+            "nominal_size": 1024,
+            "os_info": "http://mirror.lakka.tv/noobs/Lakka_RPi2/os.json",
+            "os_name": "Lakka_RPi2",
+            "partition_setup": "http://mirror.lakka.tv/noobs/Lakka_RPi2/partition_setup.sh",
+            "partitions_info": "http://mirror.lakka.tv/noobs/Lakka_RPi2/partitions.json",
+            "release_date": "2016-10-18",
+            "supports_usb_boot": "false",
+            "supported_hex_revisions": "1040,1041,2082",
+            "supported_models": [
+                "Pi 2",
+                "Pi 3"
+            ],
+            "tarballs": [
+                "http://mirror.lakka.tv/noobs/Lakka_RPi2/Lakka_RPi2_System.tar.xz",
+                "http://mirror.lakka.tv/noobs/Lakka_RPi2/Lakka_RPi2_Storage.tar.xz"
+            ]
+        },
+        {
+            "description": "A port of Debian jessie for the Raspberry Pi (full desktop version)",
+            "feature_level": 35120124,
+            "icon": "http://downloads.raspberrypi.org/raspbian/Raspbian_with_PIXEL.png",
+            "marketing_info": "http://downloads.raspberrypi.org/raspbian/marketing.tar",
+            "nominal_size": 4022,
+            "os_info": "http://downloads.raspberrypi.org/raspbian/os.json",
+            "os_name": "Raspbian with PIXEL",
+            "partition_setup": "http://downloads.raspberrypi.org/raspbian/partition_setup.sh",
+            "partitions_info": "http://downloads.raspberrypi.org/raspbian/partitions.json",
+            "release_date": "2017-03-02",
+            "supported_hex_revisions": "2,3,4,5,6,7,8,9,d,e,f,10,11,12,14,19,1040,1041,0092,0093,2082",
+            "supported_models": [
+                "Pi Model",
+                "Pi 2",
+                "Pi Zero",
+                "Pi 3"
+            ],
+            "tarballs": [
+                "http://downloads.raspberrypi.org/raspbian/boot.tar.xz",
+                "http://downloads.raspberrypi.org/raspbian/root.tar.xz"
+            ]
+        },
+        {
+            "description": "Adds an empty 512MB ext4 format partition to the partition layout.",
+            "icon": "http://downloads.raspberrypi.org/data_partition/Data_Partition.png",
+            "nominal_size": 512,
+            "os_info": "http://downloads.raspberrypi.org/data_partition/os.json",
+            "os_name": "Data Partition",
+            "partitions_info": "http://downloads.raspberrypi.org/data_partition/partitions.json",
+            "tarballs": [
+                "http://downloads.raspberrypi.org/data_partition/data.tar.xz"
+            ]
+        },
+        {
+            "description": "A fast and feature filled open source media center",
+            "feature_level": 0,
+            "icon": "http://download.osmc.tv/installers/noobs/NOOBS-Logo-2.png",
+            "marketing_info": "http://download.osmc.tv/installers/noobs/marketing.tar",
+            "nominal_size": 1580,
+            "os_info": "http://download.osmc.tv/installers/noobs/os-pi2.json",
+            "os_name": "OSMC_Pi2",
+            "partition_setup": "http://download.osmc.tv/installers/noobs/partition_setup.sh",
+            "partitions_info": "http://download.osmc.tv/installers/noobs/partitions-pi2.json",
+            "release_date": "2016-05-02",
+            "supports_usb_boot": "false",
+            "supported_hex_revisions": "1040,1041,2082",
+            "supported_models": [
+                "Pi 2",
+                "Pi 3"
+            ],
+            "tarballs": [
+                "http://download.osmc.tv/installers/noobs/boot-rbp2.tar.xz",
+                "http://download.osmc.tv/installers/noobs/root-rbp2.tar.xz"
+            ]
+        },
+        {
+            "description": "Recalbox, the open source retro gaming console for rpi1!",
+            "icon": "https://archive.recalbox.com/noobs/recalboxOS.png",
+            "marketing_info": "https://archive.recalbox.com/noobs/marketing.tar",
+            "nominal_size": 2048,
+            "os_info": "https://archive.recalbox.com/noobs/rpi1/os.json",
+            "os_name": "recalboxOS-rpi1",
+            "partition_setup": "https://archive.recalbox.com/noobs/partition_setup.sh",
+            "partitions_info": "https://archive.recalbox.com/noobs/partitions.json",
+            "release_date": "2016-11-26",
+            "supports_usb_boot": "false",
+            "supported_hex_revisions": "2,3,4,5,6,7,8,9,d,e,f,10,11,12,14,19,0092,0093",
+            "supported_models": [
+                "Pi Model",
+                "Pi Compute Module",
+                "Pi Zero"
+            ],
+            "tarballs": [
+                "https://archive.recalbox.com/updates/v1.0/stable/rpi1/boot.tar.xz",
+                "https://archive.recalbox.com/updates/v1.0/stable/rpi1/root.tar.xz"
+            ]
+        },
+        {
+            "description": "Recalbox, the open source retro gaming console for rpi2!",
+            "icon": "https://archive.recalbox.com/noobs/recalboxOS.png",
+            "marketing_info": "https://archive.recalbox.com/noobs/marketing.tar",
+            "nominal_size": 2048,
+            "os_info": "https://archive.recalbox.com/noobs/rpi2/os.json",
+            "os_name": "recalboxOS-rpi2",
+            "partition_setup": "https://archive.recalbox.com/noobs/partition_setup.sh",
+            "partitions_info": "https://archive.recalbox.com/noobs/partitions.json",
+            "release_date": "2016-11-26",
+            "supports_usb_boot": "false",
+            "supported_hex_revisions": "1040,1041",
+            "supported_models": [
+                "Pi 2"
+            ],
+            "tarballs": [
+                "https://archive.recalbox.com/updates/v1.0/stable/rpi2/boot.tar.xz",
+                "https://archive.recalbox.com/updates/v1.0/stable/rpi2/root.tar.xz"
+            ]
+        },
+        {
+            "description": "Recalbox, the open source retro gaming console for rpi3!",
+            "icon": "https://archive.recalbox.com/noobs/recalboxOS.png",
+            "marketing_info": "https://archive.recalbox.com/noobs/marketing.tar",
+            "nominal_size": 2048,
+            "os_info": "https://archive.recalbox.com/noobs/rpi3/os.json",
+            "os_name": "recalboxOS-rpi3",
+            "partition_setup": "https://archive.recalbox.com/noobs/partition_setup.sh",
+            "partitions_info": "https://archive.recalbox.com/noobs/partitions.json",
+            "release_date": "2016-11-26",
+            "supports_usb_boot": "false",
+            "supported_hex_revisions": "2082",
+            "supported_models": [
+                "Pi 3"
+            ],
+            "tarballs": [
+                "https://archive.recalbox.com/updates/v1.0/stable/rpi3/boot.tar.xz",
+                "https://archive.recalbox.com/updates/v1.0/stable/rpi3/root.tar.xz"
+            ]
+        },
+        {
+            "description": "RISC OS is a very fast and compact system",
+            "feature_level": 35120124,
+            "icon": "http://downloads.raspberrypi.org/riscos_1760/RISC_OS.png",
+            "marketing_info": "http://downloads.raspberrypi.org/riscos_1760/marketing.tar",
+            "nominal_size": 1957,
+            "os_info": "http://downloads.raspberrypi.org/riscos_1760/os.json",
+            "os_name": "RISC OS",
+            "partitions_info": "http://downloads.raspberrypi.org/riscos_1760/partitions.json",
+            "release_date": "2015-02-17",
+            "riscos_offset": 1760,
+            "supported_hex_revisions": "2,3,4,5,6,7,8,9,d,e,f,10,11,12,14,19,1040,1041",
+            "supported_models": [
+                "Pi Model",
+                "Pi Compute Module",
+                "Pi Zero",
+                "Pi 2"
+            ],
+            "tarballs": [
+                "http://downloads.raspberrypi.org/riscos_1760/RISC_OS_Boot.tar.xz",
+                "http://downloads.raspberrypi.org/riscos_1760/RISC_OS.xz"
+            ]
+        },
+        {
+            "os_name": "Windows 10 IoT Core",
+            "description": "Windows for devices. Enables you to build projects and apps.",
+            "feature_level": 0,
+            "icon": "https://iottools.blob.core.windows.net/win10iotnoobs/Windows_IoT.png",
+            "marketing_info": "https://iottools.blob.core.windows.net/win10iotnoobs/marketing.tar",
+            "nominal_size": 3836,
+            "os_info": "https://iottools.blob.core.windows.net/win10iotnoobs/os.json",
+            "partitions_info": "https://iottools.blob.core.windows.net/win10iotnoobs/partitions.json",
+            "partition_setup": "https://iottools.blob.core.windows.net/win10iotnoobs/partition_setup.sh",
+            "release_date": "2016-08-02",
+            "supported_hex_revisions": "1040,1041,2082",
+            "supported_models": [
+                "Pi 2",
+                "Pi 3"
+            ],
+            "tarballs": [
+                "",
+                "",
+                "https://iottools.blob.core.windows.net/win10iotnoobs/scratch.tar.xz",
+                "",
+                ""
+            ]
+        },
+		{
+			"description": "A port of Debian jessie for the Raspberry Pi (minimal version)",
+			"feature_level": 35120124,
+			"nominal_size": 1189,
+			"os_info": "http://steilergroup.net/raspbian/os.json",
+			"os_name": "Raspbian Lite FrankVersion",
+			"partition_setup": "http://steilergroup.net/raspbian/partition_setup.sh",
+			"partitions_info": "http://steilergroup.net/raspbian/partitions.json",
+			"release_date": "2017-03-02",
+			"supported_hex_revisions": "2,3,4,5,6,7,8,9,d,e,f,10,11,12,14,19,1040,1041,0092,0093,2082",
+			"supported_models": [
+				"Pi Model",
+				"Pi 2",
+				"Pi Zero",
+				"Pi 3"
+			],
+			"tarballs": [
+				"http://steilergroup.net/raspbian/boot.tar.xz",
+				"http://steilergroup.net/raspbian/root.tar.xz"
+			]
+		}
+    ]
+}

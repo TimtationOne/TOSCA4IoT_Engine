@@ -2,7 +2,8 @@
 
 #Git Installation
 TOSCAHOME="/home/pi/tosca4iot"
-apt-get -y install subversion git
+apt-get -y install subversion git oracle-java8-jdk
+update-alternatives --set java /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/bin/java 
 cd ~
 mkdir $TOSCAHOME
 cd $TOSCAHOME

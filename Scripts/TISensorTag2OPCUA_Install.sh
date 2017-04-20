@@ -1,11 +1,13 @@
 #!/bin/bash
 
-apt-get -y update & apt-get upgrade
-apt-get -y remove nodejs
-hash -d node
-wget https://nodejs.org/dist/v5.10.1/node-v5.10.1-linux-armv7l.tar.gz 
-tar -xvf node-v5.10.1-linux-armv7l.tar.gz -C /usr/local/lib
-export PATH=${PATH}:/usr/local/lib/node-v5.10.1-linux-armv7l/bin
+#Node Installation
+#apt-get -y update & apt-get upgrade
+#apt-get -y remove nodejs
+#hash -d node
+#wget https://nodejs.org/dist/v5.10.1/node-v5.10.1-linux-armv7l.tar.gz 
+#tar -xvf node-v5.10.1-linux-armv7l.tar.gz -C /usr/local/lib
+#export PATH=${PATH}:/usr/local/lib/node-v5.10.1-linux-armv7l/bin
+sudo apt-get -y install node
 
 #Git Installation
 TOSCAHOME="/home/pi/tosca4iot"
@@ -17,6 +19,7 @@ svn export https://github.com/TimtationOne/TOSCA4IoT_Engine.git/trunk/Applicatio
 cd TISensorTag2OPCUA
 
 #Install Libraries
-/usr/local/lib/node-v5.10.1-linux-armv7l/bin/npm install sensortag
+#/usr/local/lib/node-v5.10.1-linux-armv7l/bin/npm install sensortag
+npm install sensortag
 
 cd ~

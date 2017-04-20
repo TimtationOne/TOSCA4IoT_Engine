@@ -18,6 +18,6 @@ svn export https://github.com/TimtationOne/TOSCA4IoT_Engine.git/trunk/Applicatio
 cd TISensorTag2OPCUA
 
 #Install Libraries
-/usr/local/lib/node-v5.10.1-linux-armv7l/bin/npm install sensortag
+/usr/local/lib/node-v6.10.2-linux-armv7l/bin/npm install sensortag
 
 cd ~
